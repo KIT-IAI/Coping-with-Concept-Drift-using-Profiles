@@ -23,11 +23,14 @@ Finally, you can cope with concept drifts in energy time series forecasting in t
 
 ### Input
 
-To ...
+You have to start either the profile_linear_regression_pipeline (containing our method), or one of the two benchmark pipelines
+(dl_benchmark_pipeline or simple_benchmark_pipeline).
+To start the pipeline take a look into the file to see which input you have to provide.
+
 
 ### Output
 
-After ...
+After the execution of the pipeline a folder with summary data about the run is created.
 
 
 ## Funding
