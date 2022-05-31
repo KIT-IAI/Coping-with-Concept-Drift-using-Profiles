@@ -23,9 +23,9 @@ parser = argparse.ArgumentParser(
     description='Pipeline for evaluating to evaluate if profiles can help to cope with concept drift in STLF.'
 )
 parser.add_argument("--data", help="The dataset that should be used", type=str, default="data/data.csv")
-parser.add_argument("--column", help="The target column in the dataset", type=str, default="Bldg.124")
+parser.add_argument("--column", help="The target column in the dataset", type=str, default="MT_118")
 parser.add_argument("--training_start", help="The start date of the training data", type=str, default="01.01.2012")
-parser.add_argument("--test_start", help="The start date of the test data", type=str, default="05.01.2015")
+parser.add_argument("--test_start", help="The start date of the test data", type=str, default="05.01.2013")
 parser.add_argument("--add_cd", choices=[False, 1, 2, 3, 4, 5, 6],
                     help="Should synthetic drifts be added to the input time "
                          "series. If yes than use an integer between 1 and 6."
@@ -34,7 +34,7 @@ parser.add_argument("--add_cd", choices=[False, 1, 2, 3, 4, 5, 6],
 parser.add_argument("--start_drift", default="05.09.2015")
 parser.add_argument("--end_drift", default="01.01.2016")
 parser.add_argument("--use_temperature", choices=[True, False], help="Should the temperature as feature be selected",
-                    default=True)
+                    default=False)
 parser.add_argument("--refit", nargs="*", choices=["Periodic", "Detection"], default="Periodic")
 
 
